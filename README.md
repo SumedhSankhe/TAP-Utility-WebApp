@@ -61,12 +61,6 @@ TAP-Utility-WebApp/
 ├── app_launcher.R           # Main launcher app
 ├── modules_list.json        # Registry of available modules
 ├── R/                      # All modules live here, each in its own folder
-│   ├── Plate_boxplot_app/
-│   │   ├── app.R           # Main entry point for the module (required)
-│   │   └── data/           # (Optional) Data files specific to this module
-│   ├── Sample_Randomizer_app/
-│   │   ├── app.R
-│   │   └── Columbia_test_short.csv
 │   ├── Module_Template/    # Template for new modules
 │   │   └── app.R
 │   └── New_Module/         # (Example) Your new module folder
