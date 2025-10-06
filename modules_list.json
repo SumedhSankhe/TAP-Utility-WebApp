@@ -1,0 +1,11 @@
+[
+  {
+    "id": "module_template",
+    "label": "Module Template",
+    "source": "R/module_template/app.R",
+    "ui": "my_module_ui",
+    "server": "my_module_server",
+    "preload": true,
+    "cache": true
+  }
+]

@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore all XML files
+*.xml
+
+# Ignore R project files
+*.Rproj
