@@ -1,6 +1,6 @@
 ## app_launcher.R - Performance Optimized
 #
-# Main launcher for modular Shiny apps in the TAP-P999999-APPs repository.
+# Main launcher for the Small Shiny Apps Platform - a modular Shiny app framework.
 #
 # Performance Optimizations:
 # - Cached module loading to avoid redundant sourcing
