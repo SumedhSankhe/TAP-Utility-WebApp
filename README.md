@@ -4,6 +4,7 @@
 
 [![R](https://img.shields.io/badge/R-%3E%3D4.0-blue.svg)](https://www.r-project.org/)
 [![Shiny](https://img.shields.io/badge/shiny-modular-brightgreen.svg)](https://shiny.rstudio.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
@@ -338,7 +339,7 @@ A: Store data externally (cloud storage, database) and document how to configure
 
 ## 📜 License
 
-[Add your license here, e.g., MIT, GPL-3, etc.]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
