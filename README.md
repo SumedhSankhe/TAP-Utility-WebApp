@@ -2,8 +2,6 @@
 
 Welcome! This is a collection of small, easy-to-use apps for lab and data work. You can run any app by itself, or use the main launcher to pick from a menu.
 
-> **Note:** This application is now publicly accessible. You can run it locally via `app_launcher.R` or access a hosted deployment if provided.
-
 ------------------------------------------------------------------------
 
 ## 🚀 Quick Start
