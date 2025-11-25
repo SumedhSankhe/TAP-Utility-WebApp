@@ -354,13 +354,13 @@ if (inherits(data, "try-error")) {
 box::use(logger[log_info, log_debug, log_warn, log_error])
 
 # Log key events
-log_info(sprintf("Module loaded: %d samples", nrow(data)))
+log_info("Module loaded: {nrow(data)} samples")
 
 # Log warnings
-log_warn(sprintf("Missing samples: %s", paste(missing, collapse=", ")))
+log_warn("Missing samples: {paste(missing, collapse=', ')}")
 
 # Log errors
-log_error(sprintf("Failed to process file: %s", error_message))
+log_error("Failed to process file: {error_message}")
 ```
 
 ### Performance
