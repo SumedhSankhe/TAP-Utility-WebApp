@@ -1,15 +1,15 @@
 # Small Shiny Apps Platform
 
-> A self-service platform enabling non-technical lab users to develop and deploy custom data analysis tools without requiring DevOps support.
+A self-service platform enabling non-technical lab users to develop and deploy custom data analysis tools without requiring DevOps support.
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Try_Now-success?style=for-the-badge)](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Try_Now-success?style=flat-square)](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ---
 
 ## The Problem
 
-Research labs need specialized data analysis tools for tasks like exploratory visualization, sample randomization, and quality checks. Traditional approaches are problematic:
+Research labs need specialized data analysis tools—exploratory visualization, sample randomization, quality checks. Traditional approaches don't work well:
 
 - **Full DevOps deployment** for each tool: Slow, expensive, requires infrastructure expertise
 - **Standalone scripts**: Not shareable, not user-friendly for non-programmers
@@ -17,13 +17,13 @@ Research labs need specialized data analysis tools for tasks like exploratory vi
 
 ## The Solution
 
-A **plug-and-play module platform** where:
+A plug-and-play module platform where:
 - One deployment serves unlimited tools
 - Developers add new tools by dropping in a single R file
 - Non-technical users select tools from a dropdown menu
 - Each tool runs independently with zero configuration
 
-**Result**: Lab researchers get the custom tools they need without waiting for DevOps support.
+Result: Lab researchers get the custom tools they need without waiting for DevOps support.
 
 ---
 
@@ -71,12 +71,12 @@ graph TB
 
 A production-ready visualization suite demonstrating the platform's capabilities:
 
-- **Upload custom datasets**: Metadata CSV + expression matrix
-- **Interactive boxplots**: Expression levels grouped by experimental variables
-- **Heatmaps**: Top variable features with Plotly-based tooltips
-- **PCA plots**: Sample relationships with customizable axes
+- Upload custom datasets (metadata CSV + expression matrix)
+- Interactive boxplots for expression levels grouped by experimental variables
+- Heatmaps of top variable features with Plotly-based tooltips
+- PCA plots of sample relationships with customizable axes
 
-**Technical highlights**: Comprehensive data validation (sample alignment, type checking), dynamic UI (sidebar adapts to selected tab), error handling with user-friendly messages, optimized reactive programming to minimize re-computation.
+Technical highlights: Comprehensive data validation (sample alignment, type checking), dynamic UI (sidebar adapts to selected tab), error handling with user-friendly messages, optimized reactive programming to minimize re-computation.
 
 ---
 
@@ -98,7 +98,7 @@ A production-ready visualization suite demonstrating the platform's capabilities
 
 ### Try the Live Demo
 
-**[Launch Application →](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)**
+**[Launch Application](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)**
 
 ### Run Locally
 
@@ -134,7 +134,7 @@ mkdir R/My_Tool && cp R/Module_Template/app.R R/My_Tool/app.R
 # 4. Run the launcher and select your tool from the dropdown
 ```
 
-**Full details**: [Developer Guide →](user-guides/DEVELOPER_GUIDE.md)
+See the [Developer Guide](user-guides/DEVELOPER_GUIDE.md) for full details.
 
 ---
 
@@ -159,19 +159,19 @@ Small-Shiny-Apps-Platform/
 
 ## Documentation
 
-- **[User Guide](user-guides/USER_GUIDE.md)**: For lab researchers using the tools
-- **[Developer Guide](user-guides/DEVELOPER_GUIDE.md)**: For developers adding new modules
-- **[Live Demo](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)**: Try the platform
+- [User Guide](user-guides/USER_GUIDE.md) - For lab researchers using the tools
+- [Developer Guide](user-guides/DEVELOPER_GUIDE.md) - For developers adding new modules
+- [Live Demo](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/) - Try the platform
 
 ---
 
 ## Impact
 
-**Problem solved**: Reduced deployment friction for research tools from weeks (DevOps cycle) to minutes (drop in a file).
+Reduced deployment friction for research tools from weeks (DevOps cycle) to minutes (drop in a file).
 
-**Demonstrates**: Platform engineering, modular architecture, performance optimization, production-ready R/Shiny development, user-centric design.
+Demonstrates platform engineering, modular architecture, performance optimization, production-ready R/Shiny development, and user-centric design.
 
-**Use case**: Designed for bioinformatics/lab research environments but generalizable to any domain requiring self-service analytics tools.
+Designed for bioinformatics/lab research environments but generalizable to any domain requiring self-service analytics tools.
 
 ---
 
@@ -185,5 +185,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Sumedh Sankhe**
 Email: [sumedh.sankhe@gmail.com](mailto:sumedh.sankhe@gmail.com)
-
-**Portfolio**: [https://sumedhsankhe.github.io](https://sumedhsankhe.github.io)
+Portfolio: [https://sumedhsankhe.github.io](https://sumedhsankhe.github.io)

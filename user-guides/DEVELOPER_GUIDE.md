@@ -1,10 +1,10 @@
 # Developer Guide
 
-Complete guide for developers adding new modules to the Small Shiny Apps Platform.
+Complete guide for adding new modules to the Small Shiny Apps Platform.
 
 ---
 
-## 🔧 Development Setup
+## Development Setup
 
 ### Prerequisites
 - R (>= 4.0)
@@ -27,7 +27,7 @@ Rscript -e "shiny::runApp('app_launcher.R')"
 
 ---
 
-## 📦 Adding a New Module
+## Adding a New Module
 
 ### Quick Start (5 minutes)
 
@@ -73,11 +73,11 @@ Rscript -e "shiny::runApp('app_launcher.R')"
 
 ---
 
-## 📚 Module Registry Reference
+## Module Registry Reference
 
 ### `modules_list.json` Schema
 
-Each module is registered with the following properties:
+Each module requires these properties:
 
 ```json
 {
@@ -103,21 +103,22 @@ Each module is registered with the following properties:
 
 ---
 
-## 🎨 Best Practices
+## Best Practices
 
 ### Module Development
 
 #### 1. Use `box::use()` for Imports
-**Always use explicit imports** instead of `library()`:
+
+Always use explicit imports instead of `library()`:
 
 ```r
-# ✅ GOOD: Explicit imports
+# Good: Explicit imports
 box::use(
   shiny[NS, moduleServer, renderPlot, plotOutput],
   ggplot2[ggplot, aes, geom_point, theme_minimal]
 )
 
-# ❌ BAD: Global namespace pollution
+# Bad: Global namespace pollution
 library(shiny)
 library(ggplot2)
 ```
@@ -135,11 +136,13 @@ my_module_server <- function(id) {
 ```
 
 #### 2. Keep Modules Self-Contained
+
 - All data, helpers, and utilities should live in the module folder
 - Each module should work standalone without dependencies on other modules
 - Document data sources and requirements at the top of `app.R`
 
 #### 3. Document Your Module
+
 Add a header comment to your `app.R`:
 
 ```r
@@ -165,7 +168,8 @@ Add a header comment to your `app.R`:
 ```
 
 #### 4. Use Proper Namespacing
-**Always use `NS()` for all input/output IDs**:
+
+Always use `NS()` for all input/output IDs:
 
 ```r
 my_module_ui <- function(id) {
@@ -179,6 +183,7 @@ my_module_ui <- function(id) {
 ```
 
 #### 5. Validate User Inputs
+
 Use `shiny::validate()` and `shiny::need()` for clear error messages:
 
 ```r
@@ -198,16 +203,13 @@ output$plot <- renderPlot({
 
 ---
 
-## 💾 Data Management
+## Data Management
 
 ### File Size Limits
 
-**⚠️ IMPORTANT: Do NOT include files totaling >50MB in this repository.**
+**Important: Do NOT include files totaling >50MB in this repository.**
 
-Large files cause problems with:
-- Version control (Git performance)
-- Repository cloning time
-- Deployment to hosting services
+Large files cause problems with version control, repository cloning, and deployment to hosting services.
 
 ### Recommendations
 
@@ -246,7 +248,7 @@ Large files cause problems with:
 
 ---
 
-## 🧪 Testing Your Module
+## Testing Your Module
 
 ### Standalone Testing
 
@@ -271,24 +273,24 @@ if (sys.nframe() == 0) {
 
 ### Integration Testing
 
-1. **Register your module** in `modules_list.json`
-2. **Run the launcher**: `shiny::runApp('app_launcher.R')`
-3. **Select your module** from the dropdown
-4. **Test in the platform context**
+1. Register your module in `modules_list.json`
+2. Run the launcher: `shiny::runApp('app_launcher.R')`
+3. Select your module from the dropdown
+4. Test in the platform context
 
 ### Edge Cases to Test
 
-- ✅ Empty file uploads
-- ✅ Mismatched column names
-- ✅ Non-numeric data in numeric fields
-- ✅ Duplicate IDs/sample names
-- ✅ Missing required columns
-- ✅ Very large inputs (performance)
-- ✅ Special characters in inputs
+- Empty file uploads
+- Mismatched column names
+- Non-numeric data in numeric fields
+- Duplicate IDs/sample names
+- Missing required columns
+- Very large inputs (performance)
+- Special characters in inputs
 
 ---
 
-## 📦 Package Management
+## Package Management
 
 ### Adding New Packages
 
@@ -331,7 +333,7 @@ renv::clean()
 
 ---
 
-## 🎯 Code Quality Guidelines
+## Code Quality Guidelines
 
 ### Error Handling
 
@@ -364,14 +366,14 @@ log_error(sprintf("Failed to process file: %s", error_message))
 ### Performance
 
 ```r
-# ✅ GOOD: Cache expensive computations
+# Good: Cache expensive computations
 pca_data <- reactive({
   req(input$file)
   # This only recomputes when input$file changes
   compute_pca(read_data(input$file))
 })
 
-# ❌ BAD: Recompute on every render
+# Bad: Recompute on every render
 output$plot <- renderPlot({
   data <- read_data(input$file)
   pca <- compute_pca(data)  # Runs every time plot updates
@@ -381,15 +383,15 @@ output$plot <- renderPlot({
 
 ### Reactive Programming Tips
 
-1. **Use `reactive()` for derived data**
-2. **Use `req()` to require inputs** before computation
-3. **Use `isolate()` to prevent** unnecessary reactivity
-4. **Use `observeEvent()` for side effects**
-5. **Minimize reactive dependencies** in render functions
+1. Use `reactive()` for derived data
+2. Use `req()` to require inputs before computation
+3. Use `isolate()` to prevent unnecessary reactivity
+4. Use `observeEvent()` for side effects
+5. Minimize reactive dependencies in render functions
 
 ---
 
-## 🔧 Platform Configuration
+## Platform Configuration
 
 ### `.Rprofile` Settings
 
@@ -412,7 +414,7 @@ options(shiny.reactlog = TRUE)  # Enable reactivity debugging
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Testing
 
@@ -481,9 +483,9 @@ CMD ["R", "-e", "shiny::runApp('/srv/shiny-server/app', port=3838, host='0.0.0.0
 
 ---
 
-## 📋 Module Checklist
+## Module Checklist
 
-Before submitting a new module, ensure:
+Before submitting a new module:
 
 - [ ] Module works standalone (bottom of `app.R` includes test harness)
 - [ ] Registered in `modules_list.json` with unique ID
@@ -499,7 +501,7 @@ Before submitting a new module, ensure:
 
 ---
 
-## 🆘 Common Issues
+## Common Issues
 
 ### "Object not found" errors
 
@@ -512,7 +514,7 @@ output$plot <- shiny$renderPlot({ ... })  # Not renderPlot({ ... })
 
 ### Module doesn't appear in dropdown
 
-**Check**:
+Check:
 1. Is module registered in `modules_list.json`?
 2. Is the `source` path correct?
 3. Do `ui` and `server` function names match?
@@ -531,7 +533,7 @@ textInput(ns("name"), ...)  # Not textInput("name", ...)
 
 **Problem**: App becomes slow with multiple modules
 
-**Solutions**:
+Solutions:
 1. Set `preload: false` in `modules_list.json` (lazy loading)
 2. Use `reactive()` to cache expensive computations
 3. Minimize reactive dependencies in `renderPlot()`/`renderTable()`
@@ -539,16 +541,16 @@ textInput(ns("name"), ...)  # Not textInput("name", ...)
 
 ---
 
-## 📞 Support
+## Support
 
 For questions or issues:
 
 **Sumedh Sankhe**
-Email: [sumedh.sankhe@gmail.com](mailto:sumedh.sankhe@gmail.com)
+Email: sumedh.sankhe@gmail.com
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Shiny Modules Documentation](https://shiny.rstudio.com/articles/modules.html)
 - [box Package Guide](https://klmr.me/box/)

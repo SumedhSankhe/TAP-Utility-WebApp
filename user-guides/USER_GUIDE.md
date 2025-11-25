@@ -4,11 +4,11 @@ Guide for lab researchers and analysts using the Small Shiny Apps Platform.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Access the Platform
 
-**Live Demo**: [https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/](https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/)
+**Live Demo**: https://ssankhe.shinyapps.io/Small-Shiny-Apps-Platform/
 
 **Or run locally**:
 1. Open RStudio
@@ -17,23 +17,22 @@ Guide for lab researchers and analysts using the Small Shiny Apps Platform.
 
 ---
 
-## 📱 Using the Platform
+## Using the Platform
 
 ### Selecting a Tool
 
-1. When the app opens, you'll see a **dropdown menu** in the sidebar
+1. When the app opens, you'll see a dropdown menu in the sidebar
 2. Click the dropdown to see all available tools
 3. Select the tool you want to use
 4. The tool's interface will load in the main area
 
 ### Switching Between Tools
 
-- Simply select a different tool from the dropdown menu
-- Each tool runs independently—no data is shared between tools
+Simply select a different tool from the dropdown menu. Each tool runs independently—no data is shared between tools.
 
 ---
 
-## 🔬 Available Tools
+## Available Tools
 
 ### Module Template
 
@@ -107,7 +106,7 @@ Gene_C,2.1,2.3,2.2,2.0
 
 ---
 
-## ❓ Frequently Asked Questions
+## Frequently Asked Questions
 
 ### General
 
@@ -164,7 +163,7 @@ A: In the sidebar, select which metadata column to use for grouping/coloring. Th
 
 ---
 
-## 💡 Tips & Best Practices
+## Tips & Best Practices
 
 ### Data Preparation
 
@@ -197,7 +196,7 @@ A: In the sidebar, select which metadata column to use for grouping/coloring. Th
 
 ---
 
-## 🆘 Getting Help
+## Getting Help
 
 ### Request a New Tool
 
@@ -216,11 +215,11 @@ If you encounter a bug or error:
 ### Contact
 
 **Sumedh Sankhe**
-Email: [sumedh.sankhe@gmail.com](mailto:sumedh.sankhe@gmail.com)
+Email: sumedh.sankhe@gmail.com
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
-- **Developer Guide**: [user-guides/DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) - For creating new modules
-- **Project README**: [README.md](../README.md) - Technical overview and architecture
+- [Developer Guide](DEVELOPER_GUIDE.md) - For creating new modules
+- [Project README](../README.md) - Technical overview and architecture
